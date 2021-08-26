@@ -8,6 +8,7 @@ from undirected_graph_edge import UndirectedGraphEdge
 class UndirectedGraph:
     def __init__(self, n=0):
         self.adjacency_matrix = np.zeros((n, n))
+        self.n = n
         self.vertices = []
         self.edges = []
 
@@ -19,3 +20,9 @@ class UndirectedGraph:
                 if randint(1, 10) <= 6:
                     self.adjacency_matrix[i, j] = 1
                     self.adjacency_matrix[j, i] = 1
+
+    def to_string(self):
+        for i in range(0, self.n):
+            for j in range(0, self.n):
+                print(self.adjacency_matrix[i, j], end=' ')
+            print('\n')
