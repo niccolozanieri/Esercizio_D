@@ -33,7 +33,7 @@ class UnionFind:
     def find_set(self, vertex):
         return vertex.representative
 
-    def union_set(self, first_vertex, second_vertex):
+    def union(self, first_vertex, second_vertex):
         first_representative = self.find_set(first_vertex)
         second_representative = self.find_set(second_vertex)
 

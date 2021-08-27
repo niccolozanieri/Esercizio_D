@@ -42,13 +42,13 @@ class TestUnionFind(unittest.TestCase):
         vertex_1 = union_find_1.make_set(UndirectedGraphVertex(4))
         vertex_2 = union_find_1.make_set(UndirectedGraphVertex(6))
 
-        union_find_1.union_set(vertex_1, vertex_2)
+        union_find_1.union(vertex_1, vertex_2)
         self.assertEqual(vertex_1.key, 4)
         self.assertEqual(vertex_1.next.key, 6)
 
         vertex_3 = union_find_1.make_set(UndirectedGraphVertex(3))
         vertex_4 = union_find_1.make_set(UndirectedGraphVertex(9))
-        union_find_1.union_set(vertex_2, vertex_4)
+        union_find_1.union(vertex_2, vertex_4)
         captured_output = io.StringIO()
         sys.stdout = captured_output
         union_find_1.to_string()
