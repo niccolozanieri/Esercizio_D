@@ -24,7 +24,6 @@ class UndirectedGraph:
                 self.adjacency_matrix[edge.first_vertex.key, edge.second_vertex.key] = 1
                 self.adjacency_matrix[edge.second_vertex.key, edge.first_vertex.key] = 1
 
-
     def initialize(self, rand=1):
         if rand == 1:
             for i in range(0, self.n):
